@@ -12,10 +12,12 @@ arr_string = data.split('\n')
 
 
 # creating an empy list where we will add frst item from each row
-column_1 = []  
-column_2 = []
-column_3 = []
-column_4 = []
+# https://en.wikipedia.org/wiki/Iris_flower_data_set
+# Creating a correct order of variables from the columns
+sepal_length_var = []  
+sepal_width_var = []
+petal_length_var = []
+petal_width_var = []
 
 column_index = 0  # iterate throwugh the items in a list
 
@@ -31,11 +33,11 @@ def column_create(column, index):
         # we split each row by comma and add the first item to the column_1 list
         column.append(each_row.split(',')[index])  
 
-column_create(column_1, 0)  # first column
-column_create(column_2, 1)  # second column
-column_create(column_3, 2)  # third column
-column_create(column_4, 3)  # fourth column
+column_create(sepal_length_var, 0)  # first column
+column_create(sepal_width_var, 1)  # second column
+column_create(petal_length_var, 2)  # third column
+column_create(petal_width_var, 3)  # fourth column
 
-print(column_4)  # print the first column
+print(sepal_length_var)  # print the first column
 
 # Now we need to get an access to the first variable. 
