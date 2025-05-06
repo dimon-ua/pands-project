@@ -29,7 +29,7 @@ The project is divided into multiple modules for better organization:
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>```
+   git clone <repository-url>
    ```bash
    cd <repository-folder>
 
