@@ -1,6 +1,7 @@
 # as the project is divided into several files, we need to import the functions from other files
 from data_loader import data_load as dl
 from column_extractor import column_create
+from summary import sum_items 
 
 
 # this means that this file will be run as a script, not inported
@@ -22,5 +23,6 @@ if __name__ == "__main__":
     petal_length_var = column_create(column, 2)  # third column with 3rd element
     petal_width_var = column_create(column, 3)  # fourth column with 4th element
      
+    print(sum_items(sepal_length_var))  # print the sum of the first column
 
 
