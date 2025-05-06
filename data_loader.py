@@ -10,4 +10,6 @@ def data_load():
         
     # https://docs.python.org/3.6/library/stdtypes.html#str.split
     # each row is separated by a new line character, so we split the string into a list of strings
-    
+    arr_string = data.split('\n') 
+    return arr_string
+  
