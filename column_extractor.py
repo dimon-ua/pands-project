@@ -1,4 +1,3 @@
-
 # As we need to create four columns, its better to create a function that will do the same job for each column
 def column_create(rows, index):  
     column = []
@@ -8,7 +7,7 @@ def column_create(rows, index):
         if each_row == '':
             continue
         
-        # we split each row by comma and add the first item to the column_1 list
+        # we split each row by comma and add the index item to the column list
         column.append(each_row.split(',')[index])    
     return column
      
