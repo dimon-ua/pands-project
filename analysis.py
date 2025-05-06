@@ -2,6 +2,7 @@
 from data_loader import data_load as dl
 from column_extractor import column_create
 from summary import sum_items 
+from convert_list_to_float import converter
 
 
 # this means that this file will be run as a script, not inported
@@ -22,7 +23,19 @@ if __name__ == "__main__":
     sepal_width_var = column_create(column, 1)  # second column with 2nd element
     petal_length_var = column_create(column, 2)  # third column with 3rd element
     petal_width_var = column_create(column, 3)  # fourth column with 4th element
+    
+    # Now we need to convert the string values to float values for the summary function
+    float_sepal_length_var = converter(sepal_length_var)
+    float_sepal_width_var = converter(sepal_width_var)
+    float_petal_length_var = converter(petal_length_var)
+    float_petal_width_var = converter(petal_width_var)    
      
-    print(sum_items(sepal_length_var))  # print the sum of the first column
+    # using summary function to get the sum of each column
+    sum_sepal_length_var = sum_items(float_sepal_length_var)
+    sum_sepal_width_var = sum_items(float_sepal_width_var)
+    sum_petal_length_var = sum_items(float_petal_length_var)
+    sum_petal_width_var = sum_items(float_petal_width_var)
+    
+   
 
 
