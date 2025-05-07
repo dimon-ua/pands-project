@@ -1,12 +1,16 @@
 # as the project is divided into several files, we need to import the functions from other files
 # data_loader is a package where we loading dataset form a file
 from data_loader import data_load as dl
+
 # column_extractor is a package where we create columns for each variable by extracting an index element for each variable
 from column_extractor import column_create
+
 # summary is a package where we sum the values of each column
 from summary import sum_items 
+
 # convert_list_to_float is a package where we convert the string values to float values to be able to do math operation
 from convert_list_to_float import converter
+
 # importing an output package to output the results to a file
 from output_summary_in_file import output_txt
 
@@ -44,6 +48,7 @@ if __name__ == "__main__":
     
     # Output the results to the file 
     # Using round() method to round the result and write the output in 2 decimal places
+    # https://www.geeksforgeeks.org/round-function-python/
     output_txt("Summary of sepal_length variable is: ", round(sum_sepal_length_var,2) )
     output_txt("Summary of sepal_width variable is: ", round(sum_sepal_width_var,2) )
     output_txt("Summary of petal_length variable is: ", round(sum_petal_length_var,2))
