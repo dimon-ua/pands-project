@@ -14,10 +14,7 @@ from convert_list_to_float import converter
 # importing an output package to output the results to a file
 from output_summary_in_file import output_txt
 
-# Importing matplotlib for histograms, to plot the data
-# https://matplotlib.org/2.0.2/users/pyplot_tutorial.html
-import matplotlib.pyplot as plt
-
+from hist_variables import hist_plot as hist_plot
 
 # this means that this file will be run as a script, not inported
 if __name__ == "__main__":
@@ -70,18 +67,7 @@ if __name__ == "__main__":
     
     # plt.show()
     
-    def hist_plot(column, name_variable):
-            # Plotting the data, histograms on each variables
-            # https://matplotlib.org/stable/gallery/statistics/hist.html
-        plt.plot(column, 'r', label=name_variable)
-        # Adding legend to the plot, the bane_variable is the name of the variable which will be shown in the legend
-        plt.legend()
-        
-        # Adding title to the plot
-        plt.title(name_variable + ' Histogram')
-        
-        # Show the plot
-        plt.show()
+    
         
     # Plotting the data, histograms on each variables 
     hist_sepal_length_var = hist_plot(float_sepal_length_var, 'Sepal Length')
