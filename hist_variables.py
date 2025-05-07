@@ -35,7 +35,8 @@ def hist_plot(column, name_variable):
 def scatter_plot(variable_one, variable_two, x_label, y_label, color_one='blue'):
     # Plotting the data, scatter plot on each pair of variables
     # https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html
-    plt.scatter(variable_one, variable_two , c=color_one, alpha=0.7, label=f'{x_label} vs {y_label}')
+    plt.scatter(variable_one, variable_two, c=color_one, alpha=0.7, label=f'{x_label}')
+    plt.scatter(variable_two, variable_one, c='r', alpha=0.7, label=f'{y_label}')
         # Saving the plot to a folder
     if not os.path.exists('scatter_plots'):
         os.makedirs('scatter_plots')  # Create the folder if it doesn't exist
@@ -52,6 +53,7 @@ def scatter_plot(variable_one, variable_two, x_label, y_label, color_one='blue')
 
     
     file_path = os.path.join('scatter_plots', f'{x_label}_vs_{y_label}.png')
+    
     
     plt.savefig(file_path, format='png')
     

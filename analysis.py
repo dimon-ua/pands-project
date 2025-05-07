@@ -79,7 +79,7 @@ if __name__ == "__main__":
         
         
     # Plotting scatter plot for pairs of variables
-    scatter_plot(float_sepal_length_var, float_sepal_width_var, 'Sepal Length', 'Sepal Width', color_one='blue')
+    scatter_plot(float_sepal_length_var, float_sepal_width_var, 'Sepal Length', 'Sepal Width')
     scatter_plot(float_petal_length_var, float_petal_width_var, 'Petal Length', 'Petal Width')
 
     
