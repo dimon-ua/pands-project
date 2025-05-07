@@ -13,6 +13,7 @@ The project is divided into multiple modules for better organization:
 3. **`convert_list_to_float`**: Converts string values in a list to float values for mathematical operations.
 4. **`summary`**: Provides functions to calculate summary statistics, such as the sum of column values.
 5. **`analysis.py`**: The main script that ties everything together and performs the analysis.
+6. **`hist_variables`**: Generates histograms and scatter plots for visualizing two variables.
 
 ---
 
@@ -22,6 +23,9 @@ The project is divided into multiple modules for better organization:
 - **Column Extraction**: Extracts specific columns (e.g., sepal length, sepal width, petal length, petal width).
 - **Data Conversion**: Converts string values to floats for numerical operations.
 - **Summary Statistics**: Calculates the sum of each column.
+- **Histogram Generation**: Creates histograms for each variable and saves them as PNG files.
+- **Scatter Plot Generation**: Creates scatter plots for pairs of variables and saves them as PNG files.
+
 
 ---
 
@@ -30,7 +34,6 @@ The project is divided into multiple modules for better organization:
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   ```bash
    cd <repository-folder>
 
 2. Ensure the Iris dataset file (iris.data) is in the correct location.
