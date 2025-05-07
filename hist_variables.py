@@ -28,3 +28,6 @@ def hist_plot(column, name_variable):
         # https://docs.python.org/3/library/os.path.html
         plt.savefig(os.path.join('histograms', f'{name_variable}.png'), format='png')
         
+        # Clear the plot to avoid overlapping plots in subsequent calls
+        plt.clf()
+        
