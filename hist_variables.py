@@ -32,25 +32,27 @@ def hist_plot(column, name_variable):
         # Clear the plot to avoid overlapping plots in subsequent calls
         plt.clf()
 
-def scatter_plot(variable_one, variable_two, x_label, y_label):
-    # Plotting the data, scatter plot on each variables
+def scatter_plot(variable_one, variable_two, x_label, y_label, color_one='blue'):
+    # Plotting the data, scatter plot on each pair of variables
     # https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html
-    plt.scatter(variable_one, variable_two, color='blue', alpha=0.5, label=f'{x_label} vs {y_label}')
-    
+    plt.scatter(variable_one, variable_two , c=color_one, alpha=0.7, label=f'{x_label} vs {y_label}')
+        # Saving the plot to a folder
+    if not os.path.exists('scatter_plots'):
+        os.makedirs('scatter_plots')  # Create the folder if it doesn't exist
+        
     # Adding legend to the plot
     plt.legend()
     
     # Adding title to the plot
-    plt.title(f'{variable_one} vs {variable_two}')
-    plt.xlabel(variable_one)
-    plt.ylabel(variable_two)
+    plt.title(f'{x_label} vs {y_label}')
+    plt.xlabel(xlabel='x_label')
+    plt.ylabel(ylabel='y_label')
     
-    # Saving the plot to a folder
-    if not os.path.exists('scatter_plots'):
-        os.makedirs('scatter_plots')  # Create the folder if it doesn't exist
     
-    file_path = os.path.join('scatter_plots', f'{variable_one}_vs_{variable_two}.png')
-    # Using os.path.join to create the path to the folder and save the png files
+
+    
+    file_path = os.path.join('scatter_plots', f'{x_label}_vs_{y_label}.png')
+    
     plt.savefig(file_path, format='png')
     
     # Clear the plot to avoid overlapping plots in subsequent calls
