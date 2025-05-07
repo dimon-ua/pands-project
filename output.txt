@@ -3,3 +3,15 @@ Summary of sepal_length variable is: : 876.5
 Summary of sepal_width variable is: : 458.1
 Summary of petal_length variable is: : 563.8
 Summary of petal_width variable is: : 179.8
+Summary of sepal_length variable is: : 876.5
+Summary of sepal_width variable is: : 458.1
+Summary of petal_length variable is: : 563.8
+Summary of petal_width variable is: : 179.8
+Summary of sepal_length variable is: : 876.5
+Summary of sepal_width variable is: : 458.1
+Summary of petal_length variable is: : 563.8
+Summary of petal_width variable is: : 179.8
+Summary of sepal_length variable is: : 876.5
+Summary of sepal_width variable is: : 458.1
+Summary of petal_length variable is: : 563.8
+Summary of petal_width variable is: : 179.8

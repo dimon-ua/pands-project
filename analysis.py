@@ -14,6 +14,10 @@ from convert_list_to_float import converter
 # importing an output package to output the results to a file
 from output_summary_in_file import output_txt
 
+# Importing matplotlib for histograms, to plot the data
+# https://matplotlib.org/2.0.2/users/pyplot_tutorial.html
+import matplotlib.pyplot as plt
+
 
 # this means that this file will be run as a script, not inported
 if __name__ == "__main__":
@@ -53,6 +57,18 @@ if __name__ == "__main__":
     output_txt("Summary of sepal_width variable is: ", round(sum_sepal_width_var,2) )
     output_txt("Summary of petal_length variable is: ", round(sum_petal_length_var,2))
     output_txt("Summary of petal_width variable is: ", round(sum_petal_width_var,2))
+    
+    # Plotting the data, histograms on each variables
+    # https://matplotlib.org/stable/gallery/statistics/hist.html
+    plt.plot(float_sepal_length_var, 'r', label='sepal_length')
+    
+    # Adding legend to the plot
+    plt.legend()
+    
+    # Adding labels to the plot
+    plt.title('Sepal Length Histogram')
+    
+    plt.show()
     
    
 
