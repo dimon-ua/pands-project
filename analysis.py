@@ -60,16 +60,36 @@ if __name__ == "__main__":
     
     # Plotting the data, histograms on each variables
     # https://matplotlib.org/stable/gallery/statistics/hist.html
-    plt.plot(float_sepal_length_var, 'r', label='sepal_length')
+    # plt.plot(float_sepal_length_var, 'r', label='sepal_length')
     
-    # Adding legend to the plot
-    plt.legend()
+    # # Adding legend to the plot
+    # plt.legend()
     
-    # Adding labels to the plot
-    plt.title('Sepal Length Histogram')
+    # # Adding labels to the plot
+    # plt.title('Sepal Length Histogram')
     
-    plt.show()
+    # plt.show()
     
-   
+    def hist_plot(column, name_variable):
+            # Plotting the data, histograms on each variables
+            # https://matplotlib.org/stable/gallery/statistics/hist.html
+        plt.plot(column, 'r', label=name_variable)
+        # Adding legend to the plot, the bane_variable is the name of the variable which will be shown in the legend
+        plt.legend()
+        
+        # Adding title to the plot
+        plt.title(name_variable + ' Histogram')
+        
+        # Show the plot
+        plt.show()
+        
+    # Plotting the data, histograms on each variables 
+    hist_sepal_length_var = hist_plot(float_sepal_length_var, 'Sepal Length')
+    hist_sepal_width_var = hist_plot(float_sepal_width_var, 'Sepal Width')
+    hist_petal_length_var = hist_plot(float_petal_length_var, 'Petal Length')
+    hist_petal_width_var = hist_plot(float_petal_width_var, 'Petal Width')
+        
 
+        
+    
 
