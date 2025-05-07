@@ -19,6 +19,7 @@ def hist_plot(column, name_variable):
         # Show the plot
         # plt.show()
         
+        # to save the plot to anorther variable we need to use os.path.join
         if not os.path.exists('histograms'):
             os.makedirs('histograms')  # Create the folder if it doesn't exist
         
@@ -30,4 +31,29 @@ def hist_plot(column, name_variable):
         
         # Clear the plot to avoid overlapping plots in subsequent calls
         plt.clf()
-        
+
+def scatter_plot(variable_one, variable_two, x_label, y_label):
+    # Plotting the data, scatter plot on each variables
+    # https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html
+    plt.scatter(variable_one, variable_two, color='blue', alpha=0.5, label=f'{x_label} vs {y_label}')
+    
+    # Adding legend to the plot
+    plt.legend()
+    
+    # Adding title to the plot
+    plt.title(f'{variable_one} vs {variable_two}')
+    plt.xlabel(variable_one)
+    plt.ylabel(variable_two)
+    
+    # Saving the plot to a folder
+    if not os.path.exists('scatter_plots'):
+        os.makedirs('scatter_plots')  # Create the folder if it doesn't exist
+    
+    file_path = os.path.join('scatter_plots', f'{variable_one}_vs_{variable_two}.png')
+    # Using os.path.join to create the path to the folder and save the png files
+    plt.savefig(file_path, format='png')
+    
+    # Clear the plot to avoid overlapping plots in subsequent calls
+    plt.clf()       
+
+    

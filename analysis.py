@@ -14,7 +14,9 @@ from convert_list_to_float import converter
 # importing an output package to output the results to a file
 from output_summary_in_file import output_txt
 
+# importing a histogram package to plot the data
 from hist_variables import hist_plot as hist_plot
+from hist_variables import scatter_plot as scatter_plot
 
 # this means that this file will be run as a script, not inported
 if __name__ == "__main__":
@@ -75,7 +77,12 @@ if __name__ == "__main__":
     hist_petal_length_var = hist_plot(float_petal_length_var, 'Petal Length')
     hist_petal_width_var = hist_plot(float_petal_width_var, 'Petal Width')
         
+        
+    # Plotting scatter plot for pairs of variables
+    first_pair_variable = scatter_plot(float_sepal_length_var, float_sepal_width_var, 'Sepal Length', 'Sepal Width')
+    second_pair_variable = scatter_plot(float_petal_length_var, float_petal_width_var, 'Petal Length', 'Petal Width')
 
+    
         
     
 
