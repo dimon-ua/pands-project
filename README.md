@@ -41,3 +41,42 @@ The project is divided into multiple modules for better organization:
 4. ```bash
    python analysis.py
 
+## Example Output
+The script calculates the sum of each column in the Iris dataset and writes the results to output.txt. Example:
+
+- Summary of sepal_length variable is: 876.5
+- Summary of sepal_width variable is: 458.6
+- Summary of petal_length variable is: 563.7
+- Summary of petal_width variable is: 179.9
+
+### Histograms
+Histograms are generated for each variable to visualize the distribution of values. Example:
+
+- **histograms/Sepal Length.png**
+- **histograms/Sepal Width.png**
+- **histograms/Petal Length.png**
+- **histograms/Petal Width.png**
+
+### Scatter Plots
+Scatter plots are generated to visualize relationships between pairs of variables. Example:
+- **scatter_plots/Sepal Length_vs_Sepal Width.png**
+- **scatter_plots/Petal Length_vs_Petal Width.png**
+
+## Dependencies
+
+- Python 3.x
+- `matplotlib` (for plotting histograms and scatter plots)
+- 
+Install dependencies using:
+```bash
+   pip install matplotlib
+   ```
+
+## Dataset
+The Iris dataset contains 150 rows and 5 columns:
+
+- Sepal Length
+- Sepal Width
+- Petal Length
+- Petal Width
+- Class (e.g., Iris-setosa, Iris-versicolor, Iris-virginica)
