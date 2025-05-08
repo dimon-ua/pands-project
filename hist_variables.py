@@ -58,6 +58,7 @@ def scatter_plot(variable_one, variable_two, x_label, y_label, color_one='blue')
     plt.savefig(file_path, format='png')
     
     # Clear the plot to avoid overlapping plots in subsequent calls
+    # https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.clf.html#matplotlib-pyplot-clf
     plt.clf()       
 
     
