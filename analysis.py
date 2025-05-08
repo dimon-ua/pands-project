@@ -18,6 +18,9 @@ from output_summary_in_file import output_txt
 from hist_variables import hist_plot as hist_plot
 from hist_variables import scatter_plot as scatter_plot
 
+# importing mean_median_std_statistics package to calculate mean, median and std
+from mean_median_std_statistics import calc_mean_med_std as calc_mean_med_std
+
 # this means that this file will be run as a script, not inported
 if __name__ == "__main__":
     column = dl()  # load the dataset from the file
@@ -84,5 +87,9 @@ if __name__ == "__main__":
 
     
         
-    
+    # Calculation of mean, median and std for each column
+    sepal_length_stats = calc_mean_med_std(float_sepal_length_var, 'Sepal Length')
+    sepal_width_stats = calc_mean_med_std(float_sepal_width_var, 'Sepal Width')
+    petal_length_stats = calc_mean_med_std(float_petal_length_var, 'Petal Length')
+    petal_width_stats = calc_mean_med_std(float_petal_width_var, 'Petal Width')
 
